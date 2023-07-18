@@ -1,6 +1,11 @@
 #include <stdio.h>
 
-int main()
+/**
+ * main - entry point
+ * Return: 0 (Success)
+ */
+
+int main(void)
 {
 	int sum = 0;
 	int limit = 1024;
@@ -16,5 +21,5 @@ int main()
 
 	printf("%d\n", sum);
 
-	return 0;
+	return (0);
 }
