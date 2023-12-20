@@ -1,0 +1,13 @@
+CC := gcc
+SRC := main.c school.c
+EXECUTABLE := school
+
+all: $(EXECUTABLE)
+
+$(EXECUTABLE):
+	$(CC) $(SRC) -o $(EXECUTABLE)
+
+.PHONY: clean
+
+clean:
+	rm -f $(EXECUTABLE)
