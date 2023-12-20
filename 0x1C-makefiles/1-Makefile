@@ -1,13 +1,9 @@
-CC := gcc
-SRC := main.c school.c
-EXECUTABLE := school
+.PHONY: all
 
-all: $(EXECUTABLE)
+CC = gcc
+CFLAGS = -Wall -Werror -Wextra -pedantic
 
-$(EXECUTABLE):
-	$(CC) $(SRC) -o $(EXECUTABLE)
+all: school
 
-.PHONY: clean
-
-clean:
-	rm -f $(EXECUTABLE)
+school:
+	${CC} ${CFLAGS} -o school main.c school.c
