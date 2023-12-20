@@ -1,9 +1,4 @@
-.PHONY: all
-
 CC = gcc
-CFLAGS = -Wall -Werror -Wextra -pedantic
-
-all: school
-
-school:
-	${CC} ${CFLAGS} -o school main.c school.c
+SRC = main.c school.c
+all: $(SRC)
+	$(CC) $(SRC) -o school
